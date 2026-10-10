@@ -1,0 +1,68 @@
+/* HelloWorld 网站样式 - 简洁现代卡片风格 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  font-family: "PingFang SC", "Microsoft YaHei", "Segoe UI", Arial, sans-serif;
+  color: #333;
+  padding: 20px;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 48px 56px;
+  max-width: 520px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+}
+
+.greeting {
+  font-size: 42px;
+  font-weight: 700;
+  color: #4a3f8f;
+  margin-bottom: 12px;
+}
+
+.subtitle {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 32px;
+  line-height: 1.6;
+}
+
+.time-box {
+  background: #f3f1ff;
+  border: 1px solid #ddd6ff;
+  border-radius: 12px;
+  padding: 16px 20px;
+  margin-bottom: 24px;
+}
+
+.time-label {
+  font-size: 13px;
+  color: #888;
+  margin-bottom: 6px;
+}
+
+.time-value {
+  font-size: 22px;
+  font-weight: 600;
+  color: #4a3f8f;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.5px;
+}
+
+.start-time {
+  font-size: 13px;
+  color: #aaa;
+}

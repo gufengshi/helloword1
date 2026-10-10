@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hello World | 我的第一个AI开发的网站</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="card">
+    <h1 class="greeting">Hello World！</h1>
+    <p class="subtitle">我是 {{OWNER}}，我的第一个AI开发的网站</p>
+
+    <div class="time-box">
+      <p class="time-label">当前服务器时间</p>
+      <p class="time-value" id="serverTime">{{SERVER_TIME}}</p>
+    </div>
+
+    <p class="start-time">服务器启动时间：{{START_TIME}}</p>
+  </main>
+
+  <!-- 前端定时刷新服务器时间（通过 /api/time 接口） -->
+  <script src="app.js"></script>
+</body>
+</html>

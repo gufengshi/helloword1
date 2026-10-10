@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hello World | 我的第一个AI开发的网站</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23667eea'/%3E%3Ctext x='32' y='42' font-size='30' font-family='Arial' font-weight='bold' fill='white' text-anchor='middle'%3EH%3C/text%3E%3C/svg%3E" />
+  <style>
+    /* ===== 基础重置 ===== */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      font-family: "PingFang SC", "Microsoft YaHei", "Segoe UI", Arial, sans-serif;
+      color: #333;
+      padding: 20px;
+    }
+
+    /* ===== 卡片主体 ===== */
+    .card {
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 48px 56px;
+      max-width: 520px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+    }
+
+    .greeting { font-size: 42px; font-weight: 700; color: #4a3f8f; margin-bottom: 12px; }
+
+    .subtitle { font-size: 18px; color: #555; margin-bottom: 32px; line-height: 1.6; }
+
+    .time-box {
+      background: #f3f1ff;
+      border: 1px solid #ddd6ff;
+      border-radius: 12px;
+      padding: 16px 20px;
+      margin-bottom: 16px;
+    }
+
+    .time-label { font-size: 13px; color: #888; margin-bottom: 6px; }
+
+    .time-value {
+      font-size: 22px;
+      font-weight: 600;
+      color: #4a3f8f;
+      font-variant-numeric: tabular-nums;
+      letter-spacing: 0.5px;
+    }
+
+    .note { font-size: 13px; color: #aaa; line-height: 1.6; }
+
+    /* ===== 响应式：窄屏适配 ===== */
+    @media (max-width: 480px) {
+      .card { padding: 32px 24px; }
+      .greeting { font-size: 32px; }
+      .subtitle { font-size: 16px; }
+      .time-value { font-size: 18px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <h1 class="greeting">Hello World！</h1>
+    <p class="subtitle">我是 【你的名字】，我的第一个AI开发的网站</p>
+
+    <div class="time-box">
+      <p class="time-label">当前时间</p>
+      <p class="time-value" id="currentTime">--:--:--</p>
+    </div>
+
+    <p class="note">云端预览版 · 时间由你的浏览器实时计算<br />运行 Node.js 项目后，页面将显示真正的服务器时间</p>
+  </main>
+
+  <script>
+    // 每 1 秒刷新当前时间
+    function updateTime() {
+      var now = new Date();
+      var pad = function (n) { return n < 10 ? '0' + n : '' + n; };
+      var text =
+        now.getFullYear() + '/' +
+        pad(now.getMonth() + 1) + '/' +
+        pad(now.getDate()) + ' ' +
+        pad(now.getHours()) + ':' +
+        pad(now.getMinutes()) + ':' +
+        pad(now.getSeconds());
+      document.getElementById('currentTime').textContent = text;
+    }
+    updateTime();
+    setInterval(updateTime, 1000);
+  </script>
+</body>
+</html>
